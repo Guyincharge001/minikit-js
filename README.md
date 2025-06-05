@@ -1,4 +1,26 @@
-# minikit-js
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <CustomErrorElement />,
+    children: [
+      // child routes
+    ],
+  },
+]);
+
+function CustomErrorElement() {
+  return (
+    <div>
+      <h1>Something went wrong!</h1>
+      <p>Please check your connection or try again.</p>
+    </div>
+  );
+}
+
+<RouterProvider router={router} /> minikit-js
 
 ## 🚀 Getting Started
 
